@@ -74,7 +74,7 @@ BEGIN
     IF NEW.score < 0 THEN
         SET NEW.score = 0;
     -- Nếu điểm lớn hơn 10, gán về 10
-    ELSEIF NEW.score > 10 THEN
+    ELSE IF NEW.score > 10 THEN
         SET NEW.score = 10;
     END IF;
 END //
